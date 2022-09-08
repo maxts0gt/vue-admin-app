@@ -57,6 +57,7 @@
 </template>
 <script>
 import axios from 'axios';
+
 export default {
   name: 'Register',
   data() {
@@ -70,7 +71,7 @@ export default {
   },
   methods: {
     async submit() {
-      await axios.post('http://localhost:8000/api/admin/register', {
+      await axios.post('register', {
         first_name: this.first_name,
         last_name: this.last_name,
         email: this.email,
